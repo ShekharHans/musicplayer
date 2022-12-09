@@ -1,85 +1,93 @@
-const music = new Audio('vande.mp3');
+const music = new Audio('/home/home.mp3');
 
 // create Array 
 
 const songs = [
     {
         id:'1',
-        songName:` On My Way <br>
-        <div class="subtitle">Alan Walker</div>`,
-        poster: "img/1.jpg"
+        songName:`Choo Lo<br>
+        <div class="subtitle">The Local Train</div>`,
+        poster: "homeImg/1.jpg"
     },
     {
         id:'2',
-        songName:` Alan Walker-Fade <br>
-        <div class="subtitle">Alan Walker</div>`,
-        poster: "img/2.jpg"
+        songName:` Baarishein <br>
+        <div class="subtitle">Anuv Jain</div>`,
+        poster: "homeImg/2.jpg"
     },
     // all object type 
     {
         id:"3",
-        songName: `Cartoon - On & On <br><div class="subtitle"> Daniel Levi</div>`,
-        poster: "img/3.jpg",
+        songName: `Until I Found You <br><div class="subtitle"> Em Beihold and Stephen Sanchez
+        </div>`,
+        poster: "homeImg/3.jpg",
     },
     {
         id:"4",
-        songName: `Warriyo - Mortals <br><div class="subtitle">Mortals</div>`,
-        poster: "img/4.jpg",
+        songName: `Enemy <br><div class="subtitle">Imagine Dragons</div>`,
+        poster: "homeImg/4.jpg",
     },
     {
         id:"5",
-        songName: `Ertugrul Gazi <br><div class="subtitle">Ertugrul</div>`,
-        poster: "img/5.jpg",
+        songName: `Bad Liar <br><div class="subtitle">Imagine Dragons</div>`,
+        poster: "homeImg/5.jpg",
     },
     {
         id:"6",
-        songName: `Electronic Music <br><div class="subtitle">Electro</div>`,
-        poster: "img/6.jpg",
+        songName: `See You Again <br><div class="subtitle">Wiz Khalifa ft. Charlie Puth
+        </div>`,
+        poster: "homeImg/6.jpg",
     },
     {
         id:"7",
-        songName: `Agar Tum Sath Ho <br><div class="subtitle">Tamashaa</div>`,
-        poster: "img/7.jpg",
+        songName: `Let Me Down Slowly<br><div class="subtitle">Alec Benjamin
+        </div>`,
+        poster: "homeImg/7.jpg",
     },
     {
         id:"8",
-        songName: `Suna Hai <br><div class="subtitle">Neha Kakker</div>`,
-        poster: "img/8.jpg",
+        songName: `Believer <br><div class="subtitle">Imagine Dragons
+        </div>`,
+        poster: "homeImg/8.jpg",
     },
     {
         id:"9",
-        songName: `Dilber <br><div class="subtitle">Satyameva Jayate</div>`,
-        poster: "img/9.jpg",
+        songName: `December'er Shohorey <br><div class="subtitle">Sourav Saha</div>`,
+        poster: "homeImg/9.jpg",
     },
     {
         id:"10",
-        songName: `Duniya <br><div class="subtitle">Luka Chuppi</div>`,
-        poster: "img/10.jpg",
+        songName: `Tu Aake Dekhle <br><div class="subtitle">King</div>`,
+        poster: "homeImg/10.jpg",
     },
     {
         id:"11",
-        songName: `Lagdi Lahore Di <br><div class="subtitle">Street Dancer 3D</div>`,
-        poster: "img/11.jpg",
+        songName: `On My Way <br><div class="subtitle">Alan Walker, Farruko, and Sabrina Carpenter
+        </div>`,
+        poster: "homeImg/11.jpg",
     },
     {
         id:"12",
-        songName: `Putt Jatt Da <br><div class="subtitle">Putt Jatt Da</div>`,
-        poster: "img/12.jpg",
+        songName: `Agar Tum Saath Ho<br><div class="subtitle">Alka Yagnik and Arijit Singh
+
+        </div>`,
+        poster: "homeImg/12.jpg",
     },
     {
         id:"13",
-        songName: `Baarishein <br><div class="subtitle">Atif Aslam</div>`,
-        poster: "img/13.jpg",
+        songName: `Faded <br><div class="subtitle">Alan Walker</div>`,
+        poster: "homeImg/13.jpg",
     },
     {
         id:"14",
-        songName: `Vaaste <br><div class="subtitle">Dhvani Bhanushali</div>`,
-        poster: "img/14.jpg",
+        songName: ` Pherari mon<br><div class="subtitle">Babul Supriyo & Shreya Ghoshal</div>`,
+        poster: "homeImg/14.jpg",
     },
     {
         id:"15",
-        songName: `Lut Gaye <br><div class="subtitle">Jubin Nautiyal</div>`,
-        poster: "img/15.jpg",
+        songName: `Neshar Bojha
+        <br><div class="subtitle">Popeye</div>`,
+        poster: "homeImg/15.jpg",
     },
 ]
 
@@ -128,8 +136,8 @@ Array.from(document.getElementsByClassName('playListPlay')).forEach((element)=>{
         makeAllPlays();
         e.target.classList.remove('bi-play-circle-fill');
         e.target.classList.add('bi-pause-circle-fill');
-        music.src = `audio/${index}.mp3`;
-        poster_master_play.src =`img/${index}.jpg`;
+        music.src = `home/${index}.mp3`;
+        poster_master_play.src =`homeImg/${index}.jpg`;
         music.play();
         let song_title = songs.filter((ele)=>{
             return ele.id == index;
@@ -233,8 +241,8 @@ back.addEventListener('click', ()=>{
     if (index < 1) {
         index = Array.from(document.getElementsByClassName('songItem')).length;
     }
-    music.src = `audio/${index}.mp3`;
-    poster_master_play.src =`img/${index}.jpg`;
+    music.src = `home/${index}.mp3`;
+    poster_master_play.src =`homeImg/${index}.jpg`;
     music.play();
     let song_title = songs.filter((ele)=>{
         return ele.id == index;
@@ -258,8 +266,8 @@ next.addEventListener('click', ()=>{
     if (index > Array.from(document.getElementsByClassName('songItem')).length) {
         index = 1;
         }
-    music.src = `audio/${index}.mp3`;
-    poster_master_play.src =`img/${index}.jpg`;
+    music.src = `home/${index}.mp3`;
+    poster_master_play.src =`homeImg/${index}.jpg`;
     music.play();
     let song_title = songs.filter((ele)=>{
         return ele.id == index;

@@ -1,7 +1,7 @@
 /* Google Font 'Poppins'  */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Akronim&family=Tinos&display=swap');
-
+ @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
 * {
     padding: 0%;
     margin: 0%;
@@ -43,11 +43,12 @@ header .menu_side  button{
     height: 50px;
     border: none;
     border-radius: 50%;
-    background: #02f68090;
+    background: rgba(255, 255, 255, 0.755);
     margin-top: 400px;
     margin-left: 35px;
     box-shadow: -3px -3px 5px rgba(6, 4, 4, 0.5),
     3px 3px 5px rgba(0, 0, 0, .25);
+    text-decoration: none;
     
 }
 header .menu_side button:hover{
@@ -465,7 +466,7 @@ header .song_side .content h1 {
     font-size: 25px;
     font-weight: 600;
     font-family: 'Akronim', cursive;
-    margin-left: 319px;
+    margin-left: 450px;
     margin-top: 19px;
     /* background: -webkit-linear-gradient(#eee, #333); */
     background: #40E0D0;
@@ -488,11 +489,11 @@ header .song_side .content h5 {
     margin: 5px;
     margin-top: 5px;
     margin-left: 5px;
-    font-family: 'Homemade Apple';
+    font-family: 'Poppins', sans-serif;
     margin-top: 60px;
     width: 212px;
     text-align: center;
-    margin-left: 289px;
+    margin-left: 400px;
     word-spacing: 6px;
 
 }
