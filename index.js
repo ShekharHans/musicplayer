@@ -1,4 +1,4 @@
-const music = new Audio('/home/home.mp3');
+const music = new Audio('home/home.mp3');
 
 // create Array 
 
